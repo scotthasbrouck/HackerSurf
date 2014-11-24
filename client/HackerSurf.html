@@ -10,7 +10,11 @@
  		
 		<div id="menu">
 			<div class="pure-menu pure-menu-open">
-				<h4 id="all-sites" class="navbar-inverse"><i class="fa fa-check-circle-o"></i> ALL SITES</h4>
+				<div id="all-sites" class="navbar-inverse">
+					<div class="checkbox">
+	    				<h4><label><input type="checkbox" /> All Sites</label></h4>
+	    			</div>
+				</div>
 				{{#each jobs}}
 					{{> jobsite}}
 				{{/each}}
@@ -37,7 +41,9 @@
 </body>
 
 <template name="jobsite">
-	<h4><i class="fa fa-check-circle-o"></i> {{sitename}}</h4>
+	<div class="checkbox">
+		<h4><label><input type="checkbox" /> {{sitename}}</label></h4>
+	</div>
 </template>
 
 <template name="job">

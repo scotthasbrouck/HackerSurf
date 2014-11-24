@@ -34,7 +34,10 @@ function saveJobs(jobsite, jobs) {
 			url:jobsite.url 
 		}, {
 			$set: {
+				url: jobsite.url,
+				sitename: jobsite.sitename,
 				updatedAt: new Date(),
+				icon: jobsite.icon,
 				jobs: jobs
 			}
 		});

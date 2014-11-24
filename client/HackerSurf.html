@@ -1,5 +1,5 @@
 <head>
- 	<title>HackerSurf</title>
+ 	<title>hacker.surf</title>
  	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -10,21 +10,20 @@
  		
 		<div id="menu">
 			<div class="pure-menu pure-menu-open">
-				<a class="pure-menu-heading" href="#">ALL SITES</a>
-				<ul>
-					{{#each jobs}}
-						{{> jobsite}}
-					{{/each}}
-				</ul>
+				<h4 id="all-sites" class="navbar-inverse"><i class="fa fa-check-circle-o"></i> ALL SITES</h4>
+				{{#each jobs}}
+					{{> jobsite}}
+				{{/each}}
 			</div>
 		</div>
 
 		<div id="main">
 			<div class="header">
-				<h1>HackerSurf</h1>
+				<h1><i class="fa fa-code"></i> hacker.surf</h1>
 				<h2>All the hacker jobs in one place.</h2>
 				<p>
-				One day I spent 8 hours searching for jobs on every site immagineable.<br />So I said <strong>fuck that shit</strong>, and made HackerSurf, to put all the hacker jobs in one place.<br /><i>Source code is CC0 Public Domain license, and on Github. Enjoy.</i>
+				One day I spent 8 hours searching for jobs on every site immagineable.<br />So I said <a href="https://www.youtube.com/watch?v=G4YztQ5h-Mg" target="_blank">fuck that shit</a>, and made hacker.surf, to put all the hacker jobs in one place.<br /><i>Source code is <a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 Public Domain license</a>, and on <a href="https://github.com/scotthasbrouck/HackerSurf" target="_blank"><i class="fa fa-github"></i> Github</a>. Enjoy.</i>
+				 - <a href="http://scotthasbrouck.com" target="_blank">Scott Hasbrouck</a>
 				</p>
         	</div>
 		</div>
@@ -38,17 +37,16 @@
 </body>
 
 <template name="jobsite">
-	<li><a href="#">{{sitename}}</a></li>
+	<h4><i class="fa fa-check-circle-o"></i> {{sitename}}</h4>
 </template>
 
 <template name="job">
-		<h2 class="content-subhead">
-			
+		<h2>
   			<img class="pure-img-responsive site-icon {{#if retina}} retina-icon{{/if}}" src="/{{icon}}{{#if retina}}@2x{{/if}}.png" alt="{{sitename}}"> {{sitename}} <a href="{{url}}" target="_blank"><i class="fa fa-external-link"></i></a>
   		</h2>
 	{{#each jobs}}
 		<div class="job-entry">
-			<a href="{{link}}" class="pure-button" target="_blank">{{title}}</a>
+			<a href="{{link}}" class="btn btn-primary btn-xs" target="_blank">{{title}}</a>
 			{{location}}
 			<i>{{engagement}}</i>
 		</div>

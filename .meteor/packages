@@ -11,6 +11,5 @@ meteorhacks:npm
 
 npm-container
 http
-mrt:purecss
 ficshelf:media-query
-
+mizzao:bootstrap-3

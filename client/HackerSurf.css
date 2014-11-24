@@ -1,7 +1,17 @@
-/* THX PURE YOU'RE DA SHIT!! */
+/* THX PURE & BOOTSWATCH YOU'RE DA SHIT!! */
 /* http://purecss.io/ */
+/* http://bootswatch.com/slate/ */
 body {
-    color: #777;
+    color: #E2E2E2;
+    background-color: #272b30;
+}
+
+.header a {
+    color: #f89406 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.3);
 }
 
 .pure-img-responsive {
@@ -9,29 +19,48 @@ body {
     height: auto;
 }
 
-.site-icon {
-	top: 12px;
-	position: relative;
+.pure-button {
+	background-image: -webkit-linear-gradient(#8a9196, #7a8288 60%, #70787d);
+	background-image: -o-linear-gradient(#8a9196, #7a8288 60%, #70787d);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#8a9196), color-stop(60%, #7a8288), to(#70787d));
+	background-image: linear-gradient(#8a9196, #7a8288 60%, #70787d);
+	background-repeat: no-repeat;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8a9196', endColorstr='#ff70787d', GradientType=0);
+	-webkit-filter: none;
+	filter: none;
+	color: #ffffff;
+	background-color: #7a8288;
+	border-color: #7a8288;
 }
+
+.pure-button:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
 
 .retina-icon {
 	width: 48px;
 	height: 48px;
 }
 
+#all-sites {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 0;
+}
+
 /*
-jobs entried
+job entire
 */
 .job-entry {
 	margin: 5px;
 	font-size: 70%
 }
 
-.pure-g {
-	border: 1px solid #ddd;
-	background: #F7F7F7;
-	margin-top: 50px;
-	padding: 5px;
+.content h2 {
+	margin-bottom: 25px;
+	margin-top: 55px;
 }
 
 /*
@@ -56,15 +85,15 @@ This is the parent `<div>` that contains the menu and the content area.
 }
     #layout.active {
         position: relative;
-        left: 200px;
+        left: 250px;
     }
         #layout.active #menu {
-            left: 200px;
-            width: 200px;
+            left: 250px;
+            width: 250px;
         }
 
         #layout.active .menu-link {
-            left: 200px;
+            left: 250px;
         }
 /*
 The content `<div>` is where all your content goes.
@@ -79,10 +108,9 @@ The content `<div>` is where all your content goes.
 
 .header {
      margin: 0;
-     color: #333;
+     color: #E2E2E2;
      text-align: center;
      padding: 2.5em 2em 0;
-     border-bottom: 1px solid #eee;
  }
     .header h1 {
         margin: 0.2em 0;
@@ -91,17 +119,10 @@ The content `<div>` is where all your content goes.
     }
      .header h2 {
         font-weight: 300;
-        color: #ccc;
+        color: #E2E2E2;
         padding: 0;
         margin-top: 0;
     }
-
-.content-subhead {
-    margin: 50px 0 40px 0;
-    font-weight: 300;
-    color: #888;
-    border-top: 1px solid #eee;
-}
 
 
 
@@ -111,8 +132,8 @@ appears on the left side of the page.
 */
 
 #menu {
-    margin-left: -200px; /* "#menu" width */
-    width: 200px;
+    margin-left: -250px; /* "#menu" width */
+    width: 250px;
     position: fixed;
     top: 0;
     left: 0;
@@ -140,6 +161,12 @@ appears on the left side of the page.
         background: transparent;
     }
 
+    #menu .pure-menu h4 {
+    	padding-left: 10px;
+    	padding-right: 10px;
+    	margin-bottom: 20px;
+    }
+
     /*
     Add that light border to separate items into groups.
     */
@@ -160,7 +187,7 @@ appears on the left side of the page.
     */
     #menu .pure-menu-selected,
     #menu .pure-menu-heading {
-        background: #1f8dd6;
+        background: #353a41;
     }
         /*
         This styles a link within a selected menu item `<li>`.
@@ -248,20 +275,20 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
 
     #layout {
-        padding-left: 200px; /* left col width "#menu" */
+        padding-left: 250px; /* left col width "#menu" */
         left: 0;
     }
     #menu {
-        left: 200px;
+        left: 250px;
     }
 
     .menu-link {
         position: fixed;
-        left: 200px;
+        left: 250px;
         display: none;
     }
 
     #layout.active .menu-link {
-        left: 200px;
+        left: 250px;
     }
 }

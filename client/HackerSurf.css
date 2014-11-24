@@ -14,6 +14,11 @@ h1, h2, h3, h4, h5, h6 {
 	text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.3);
 }
 
+.site-icon {
+	position: relative;
+	top: -3px;
+}
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;

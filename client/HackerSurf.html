@@ -43,7 +43,8 @@
 
 <template name="job">
 		<h2 class="content-subhead">
-  			{{sitename}} <a href="{{url}}" target="_blank"><i class="fa fa-external-link"></i></a>
+			
+  			<img class="pure-img-responsive site-icon {{#if retina}} retina-icon{{/if}}" src="/{{icon}}{{#if retina}}@2x{{/if}}.png" alt="{{sitename}}"> {{sitename}} <a href="{{url}}" target="_blank"><i class="fa fa-external-link"></i></a>
   		</h2>
 	{{#each jobs}}
 		<div class="job-entry">

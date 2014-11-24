@@ -9,6 +9,16 @@ body {
     height: auto;
 }
 
+.site-icon {
+	top: 12px;
+	position: relative;
+}
+
+.retina-icon {
+	width: 48px;
+	height: 48px;
+}
+
 /*
 jobs entried
 */
@@ -87,9 +97,10 @@ The content `<div>` is where all your content goes.
     }
 
 .content-subhead {
-    margin: 50px 0 20px 0;
+    margin: 50px 0 40px 0;
     font-weight: 300;
     color: #888;
+    border-top: 1px solid #eee;
 }
 
 

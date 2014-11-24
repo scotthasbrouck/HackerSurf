@@ -52,6 +52,7 @@ Meteor.scrapeJobs = function(jobsite) {
 			}, {
 				$set: {
 					updatedAt: new Date(),
+					icon: thisjob.icon,
 					jobs: jobs
 				}
 			});
@@ -60,7 +61,8 @@ Meteor.scrapeJobs = function(jobsite) {
 			Scrapes.insert({
 				url: thisjob.url,
 				sitename: thisjob.sitename,
-				updatedAt: new Date(),
+				createdAt: new Date(),
+				icon: thisjob.icon,
 				jobs: jobs
 			});
 		}

@@ -1,0 +1,292 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "client/HackerSurf.html",
+			"settings":
+			{
+				"buffer_size": 435,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/HackerSurf.js",
+			"settings":
+			{
+				"buffer_size": 282,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/scrape.js",
+			"settings":
+			{
+				"buffer_size": 1316,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 147.0,
+		"selected_items":
+		[
+			[
+				"jshint",
+				"JSHint"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/scott/Code/Meteors/HackerSurf/server/scrape.js",
+		"/Users/scott/Code/Meteors/HackerSurf/client/HackerSurf.css",
+		"/Users/scott/Code/Meteors/simple-todos/simple-todos.sublime-project",
+		"/Users/scott/Code/Meteors/HackerSurf/public/HackerSurf.html",
+		"/Users/scott/Code/Meteors/HackerSurf/public/HackerSurf.css",
+		"/Users/scott/Code/Meteors/HackerSurf/public/HackerSurf.js",
+		"/Users/scott/Code/Meteors/HackerSurf/HackerSurf.sublime-project",
+		"/Users/scott/Code/Meteors/HackerSurf/private/HackerSurf.sublime-project",
+		"/Users/scott/Code/Meteors/simple-todos/simple-todos.css",
+		"/Users/scott/Code/Meteors/simple-todos/simple-todos.js",
+		"/Users/scott/Code/Meteors/simple-todos/simple-todos.html",
+		"/Users/scott/Code/Meteors/simple-todos/packages.json",
+		"/Users/scott/Documents/Nodes/HackerJobs/HackerJobs-PubSub/node_modules/cheerio/node_modules/htmlparser2/test/Events/11-script_in_script.json",
+		"/Users/scott/Documents/Nodes/HackerJobs/HackerJobs-PubSub/controllers/scrapes.js",
+		"/Users/scott/Documents/Nodes/HackerJobs/HackerJobs-PubSub/models/scrapes.js",
+		"/Users/scott/Documents/Nodes/HackerJobs/HackerJobs-PubSub/app.js",
+		"/Users/scott/Documents/Nodes/HackerJobs/HackerJobs-PubSub/node_modules/cheerio/index.js",
+		"/Users/scott/Documents/Nodes/HackerJobs/HackerJobs-PubSub/node_modules/cheerio/node_modules/htmlparser2/node_modules/domhandler/test/cases/07-unescaped_in_style.json",
+		"/Users/scott/Documents/Nodes/HackerJobs/HackerJobs-PubSub/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/test/integration/test-delayed-stream-auto-pause.js",
+		"/Users/scott/Documents/Nodes/HackerJobs/HackerJobs-PubSub/node_modules/cheerio/node_modules/CSSselect/node_modules/domutils/lib/traversal.js",
+		"/Users/scott/Documents/Nodes/HackerJobs/HackerJobs-PubSub/node_modules/cheerio/node_modules/htmlparser2/test/Events/24-special_special.json",
+		"/Users/scott/Documents/Nodes/HackerJobs/HackerJobs-PubSub/node_modules/cheerio/node_modules/htmlparser2/test/Events/07-self-closing.json"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "client/HackerSurf.html",
+					"settings":
+					{
+						"buffer_size": 435,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								154
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/HackerSurf.js",
+					"settings":
+					{
+						"buffer_size": 282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								221,
+								221
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/scrape.js",
+					"settings":
+					{
+						"buffer_size": 1316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1107,
+								1107
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 205.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"hacker",
+				"client/HackerSurf.js"
+			],
+			[
+				"hack",
+				"public/HackerSurf.html"
+			],
+			[
+				"",
+				"HackerSurf.sublime-project"
+			],
+			[
+				"sime",
+				"simple-todos/simple-todos.css"
+			],
+			[
+				"scrap",
+				"controllers/scrapes.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

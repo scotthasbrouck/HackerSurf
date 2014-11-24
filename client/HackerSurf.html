@@ -1,0 +1,55 @@
+<head>
+ 	<title>HackerSurf</title>
+ 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="layout">
+ 		
+		<div id="menu">
+			<div class="pure-menu pure-menu-open">
+				<a class="pure-menu-heading" href="#">ALL SITES</a>
+				<ul>
+					{{#each jobs}}
+						{{> jobsite}}
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+
+		<div id="main">
+			<div class="header">
+				<h1>HackerSurf</h1>
+				<h2>All the hacker jobs in one place.</h2>
+				<p>
+				One day I spent 8 hours searching for jobs on every site immagineable.<br />So I said <strong>fuck that shit</strong>, and made HackerSurf, to put all the hacker jobs in one place.<br /><i>Source code is CC0 Public Domain license, and on Github. Enjoy.</i>
+				</p>
+        	</div>
+		</div>
+
+		<div class="content">
+			{{#each jobs}}
+  				{{> job}}
+			{{/each}}
+		</div>
+	</div>
+</body>
+
+<template name="jobsite">
+	<li><a href="#">{{sitename}}</a></li>
+</template>
+
+<template name="job">
+		<h2 class="content-subhead">
+  			{{sitename}} <a href="{{url}}" target="_blank"><i class="fa fa-external-link"></i></a>
+  		</h2>
+	{{#each jobs}}
+		<div class="job-entry">
+			<a href="{{link}}" class="pure-button" target="_blank">{{title}}</a>
+			{{location}}
+			<i>{{engagement}}</i>
+		</div>
+	{{/each}}
+</template>

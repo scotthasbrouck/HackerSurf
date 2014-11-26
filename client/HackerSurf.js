@@ -23,8 +23,8 @@ Template.body.helpers({
 	jobsites: function() {
 		var jobsites = Scrapes.find({}, { url: 1, sitename: 1, _id: 0 }).fetch();
 		jobsites.forEach(function(jobsite) {
-			console.log(Session.get("activeSites." + jobsite.url));
 			jobsite.checked = ((Session.get("activeSites." + jobsite.url) === undefined) ? true : Session.get("activeSites." + jobsite.url));
+			Session.set("activeSites." + jobsite.url, jobsite.checked);
 		});
 		return jobsites;
 	}
@@ -33,12 +33,20 @@ Template.body.helpers({
 Template.body.events({
 	"change .all-sites-check input": function (event) {
     	Session.set("allSites", event.target.checked);
+    	if (event.target.checked) {
+    		var jobsites = Scrapes.find({}, { url: 1, sitename: 1, _id: 0 }).fetch();
+    		jobsites.forEach(function(jobsite) {
+    			Session.set("activeSites." + jobsite.url, true);
+    		});
+    	}
     }
 });
 
 Template.jobsite.events({
 	"change input": function (event) {
 		Session.set("activeSites." + event.target.name, event.target.checked);
-    	console.log(Session.get("activeSites"));
+		if(!event.target.checked) {
+			Session.set("allSites", false);
+		}
     }
 });

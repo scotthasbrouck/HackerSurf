@@ -1,10 +1,11 @@
 Template.body.helpers({
 	jobs: function() {
-		if(Session.get("allSites")) {
-			return Scrapes.find({}, {sort: {sitename: 1}});
-		} else {
-			return Scrapes.find({}, {sort: {sitename: 1}});
-		}
+		var jobs = Scrapes.find({}, {sort: {sitename: 1}}).fetch();
+		jobs.forEach(function(jobs) {
+			jobs.checked = ((Session.get("activeSites." + jobs.url) === undefined) ? true : Session.get("activeSites." + jobs.url));
+			console.log(jobs.checked);
+		});
+		return jobs;
 	},
 	allSitesSession: function() {
 		return ((Session.get("allSites") === undefined) ? true : Session.get("allSites"));

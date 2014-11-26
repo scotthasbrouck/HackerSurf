@@ -50,15 +50,17 @@
 </template>
 
 <template name="job">
+	{{#if checked}}
 		<h2>
-  			{{#if icon}}<img class="pure-img-responsive site-icon {{#if retina}} retina-icon{{/if}}" src="/{{icon}}{{#if retina}}@2x{{/if}}.png" alt="{{sitename}}">{{/if}} {{sitename}} <a href="{{url}}" target="_blank"><i class="fa fa-external-link"></i></a>
-  		</h2>
-	{{#each jobs}}
-		<div class="job-entry">
-			<a href="{{link}}" class="btn btn-primary btn-xs" target="_blank">{{title}}</a>
-			{{location}}
-			<strong>{{company}}</strong>
-			<i>{{engagement}}</i>
-		</div>
-	{{/each}}
+			{{#if icon}}<img class="pure-img-responsive site-icon {{#if retina}} retina-icon{{/if}}" src="/{{icon}}{{#if retina}}@2x{{/if}}.png" alt="{{sitename}}">{{/if}} {{sitename}} <a href="{{url}}" target="_blank"><i class="fa fa-external-link"></i></a>
+		</h2>
+		{{#each jobs}}
+			<div class="job-entry">
+				<a href="{{link}}" class="btn btn-primary btn-xs" target="_blank">{{title}}</a>
+				{{location}}
+				<strong>{{company}}</strong>
+				<i>{{engagement}}</i>
+			</div>
+		{{/each}}
+	{{/if}}
 </template>

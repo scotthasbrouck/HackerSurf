@@ -22,7 +22,7 @@ Template.body.helpers({
 		return Scrapes.find({}, { url: 1, sitename: 1, _id: 0 }).fetch().length;
 	},
 	jobsites: function() {
-		var jobsites = Scrapes.find({}, { url: 1, sitename: 1, _id: 0 }).fetch();
+		var jobsites = Scrapes.find({}, { url: 1, sitename: 1, _id: 0, sort: {sitename: 1} }).fetch();
 		jobsites.forEach(function(jobsite) {
 			jobsite.checked = ((Session.get("activeSites." + jobsite.url) === undefined) ? true : Session.get("activeSites." + jobsite.url));
 			Session.set("activeSites." + jobsite.url, jobsite.checked);

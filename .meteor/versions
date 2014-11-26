@@ -18,6 +18,7 @@ fastclick@1.0.1
 ficshelf:media-query@1.0.6
 follower-livedata@1.0.2
 geojson-utils@1.0.1
+gwendall:session-json@0.1.7
 html-tools@1.0.2
 htmljs@1.0.2
 http@1.0.8

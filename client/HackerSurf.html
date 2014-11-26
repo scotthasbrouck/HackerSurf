@@ -12,10 +12,10 @@
 			<div class="pure-menu pure-menu-open">
 				<div id="all-sites" class="navbar-inverse">
 					<div class="checkbox">
-	    				<h4><label class="all-sites-check"><input type="checkbox" checked="{{allSites}}"/> All Sites</label></h4>
+	    				<h4><label class="all-sites-check"><input type="checkbox" checked="{{allSitesSession}}"/> All Sites</label></h4>
 	    			</div>
 				</div>
-				{{#each jobs}}
+				{{#each jobsites}}
 					{{> jobsite}}
 				{{/each}}
 			</div>
@@ -26,13 +26,16 @@
 				<h1><i class="fa fa-code"></i> hacker.surf</h1>
 				<h2>All the hacker jobs in one place.</h2>
 				<p>
-				One day I spent 8 hours searching for jobs on every site immagineable.<br />So I said <a href="https://www.youtube.com/watch?v=XxWmM1v6Bvw" target="_blank">fuck</a> that <a href="https://www.youtube.com/watch?v=G4YztQ5h-Mg" target="_blank">shit</a>, and made hacker.surf, to put all the hacker jobs in one place.<br /><i>Source code is <a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 Public Domain license</a>, and on <a href="https://github.com/scotthasbrouck/HackerSurf" target="_blank"><i class="fa fa-github"></i> Github</a>. Enjoy.</i>
+				One day I thought I'd try to find a freelance gig or two.<br /> That turned into 8 hours and about 23 browser tabs.<br />So I said <a href="https://www.youtube.com/watch?v=XxWmM1v6Bvw" target="_blank">fuck</a> that <a href="https://www.youtube.com/watch?v=G4YztQ5h-Mg" target="_blank">shit</a>, and made hacker.surf, to put all the hacker jobs in one place.<br /><i>Source code is <a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 Public Domain license</a>, and on <a href="https://github.com/scotthasbrouck/HackerSurf" target="_blank"><i class="fa fa-github"></i> Github</a>. Enjoy.</i>
 				 - <a href="http://scotthasbrouck.com" target="_blank">Scott Hasbrouck</a>
 				</p>
         	</div>
 		</div>
 
 		<div class="content">
+			<div class="well well-sm">
+  				{{jobscount}} jobs from {{jobsites.count}} sites
+			</div>
 			{{#each jobs}}
   				{{> job}}
 			{{/each}}
@@ -42,7 +45,7 @@
 
 <template name="jobsite">
 	<div class="checkbox">
-		<h4><label><input type="checkbox" /> {{sitename}}</label></h4>
+		<h4><label><input type="checkbox" class="specific-site-checkbox" name="{{url}}"/> {{sitename}}</label></h4>
 	</div>
 </template>
 

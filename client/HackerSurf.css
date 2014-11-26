@@ -24,6 +24,10 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
 }
 
+.well {
+	text-align: center;
+}
+
 .pure-button {
 	background-image: -webkit-linear-gradient(#8a9196, #7a8288 60%, #70787d);
 	background-image: -o-linear-gradient(#8a9196, #7a8288 60%, #70787d);
@@ -66,7 +70,8 @@ job entire
 
 .content h2 {
 	margin-bottom: 25px;
-	margin-top: 55px;
+	margin-top: 35px;
+	padding-top: 20px;
 }
 
 /*

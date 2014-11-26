@@ -8,26 +8,13 @@
 	"buffers":
 	[
 		{
-			"file": "client/HackerSurf.html",
+			"contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<meta name=\"description\" content=\"A layout example with a side menu that hides on mobile, just like the Pure website.\">\n\n    <title>Side Menu &ndash; Layout Examples &ndash; Pure</title>\n\n    \n\n\n<link rel=\"stylesheet\" href=\"http://yui.yahooapis.com/pure/0.5.0/pure-min.css\">\nm\n\n\n\n\n\n\n  \n    <!--[if lte IE 8]>\n        <link rel=\"stylesheet\" href=\"css/layouts/side-menu-old-ie.css\">\n    <![endif]-->\n    <!--[if gt IE 8]><!-->\n        <link rel=\"stylesheet\" href=\"css/layouts/side-menu.css\">\n    <!--<![endif]-->\n  \n\n\n    \n\n    \n\n</head>\n<body>\n\n\n\n\n\n\n<div id=\"layout\">\n    <!-- Menu toggle -->\n    <a href=\"#menu\" id=\"menuLink\" class=\"menu-link\">\n        <!-- Hamburger icon -->\n        <span></span>\n    </a>\n\n    <div id=\"menu\">\n        <div class=\"pure-menu pure-menu-open\">\n            <a class=\"pure-menu-heading\" href=\"#\">Company</a>\n\n            <ul>\n                <li><a href=\"#\">Home</a></li>\n                <li><a href=\"#\">About</a></li>\n\n                <li class=\"menu-item-divided pure-menu-selected\">\n                    <a href=\"#\">Services</a>\n                </li>\n\n                <li><a href=\"#\">Contact</a></li>\n            </ul>\n        </div>\n    </div>\n\n    <div id=\"main\">\n        <div class=\"header\">\n            <h1>Page Title</h1>\n            <h2>A subtitle for your page goes here</h2>\n        </div>\n\n        <div class=\"content\">\n            <h2 class=\"content-subhead\">How to use this layout</h2>\n            <p>\n                To use this layout, you can just copy paste the HTML, along with the CSS in <a href=\"/css/layouts/side-menu.css\" alt=\"Side Menu CSS\">side-menu.css</a>, and the JavaScript in <a href=\"/js/ui.js\">ui.js</a>. The JS file uses vanilla JavaScript to simply toggle an <code>active</code> class that makes the menu responsive.\n            </p>\n\n            <h2 class=\"content-subhead\">Now Let's Speak Some Latin</h2>\n            <p>\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n            </p>\n\n            <div class=\"pure-g\">\n                <div class=\"pure-u-1-4\">\n                    <img class=\"pure-img-responsive\" src=\"http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg\" alt=\"Peyto Lake\">\n                </div>\n                <div class=\"pure-u-1-4\">\n                    <img class=\"pure-img-responsive\" src=\"http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg\" alt=\"Train\">\n                </div>\n                <div class=\"pure-u-1-4\">\n                    <img class=\"pure-img-responsive\" src=\"http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg\" alt=\"T-Shirt Store\">\n                </div>\n                <div class=\"pure-u-1-4\">\n                    <img class=\"pure-img-responsive\" src=\"http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg\" alt=\"Mountain\">\n                </div>\n            </div>\n\n            <h2 class=\"content-subhead\">Try Resizing your Browser</h2>\n            <p>\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n            </p>\n        </div>\n    </div>\n</div>\n\n\n\n\n\n<script src=\"js/ui.js\"></script>\n\n\n</body>\n</html>\n",
+			"file": "/Users/scott/Downloads/pure-layout-side-menu/index.html",
+			"file_size": 4017,
+			"file_write_time": 130612880280000000,
 			"settings":
 			{
-				"buffer_size": 435,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/HackerSurf.js",
-			"settings":
-			{
-				"buffer_size": 282,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/scrape.js",
-			"settings":
-			{
-				"buffer_size": 1316,
+				"buffer_size": 4018,
 				"line_ending": "Unix"
 			}
 		}
@@ -51,7 +38,11 @@
 	},
 	"console":
 	{
-		"height": 126.0
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
 	},
 	"distraction_free":
 	{
@@ -62,16 +53,15 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/scott/Code/Meteors/HackerSurf"
+	],
 	"file_history":
 	[
-		"/Users/scott/Code/Meteors/HackerSurf/server/scrape.js",
-		"/Users/scott/Code/Meteors/HackerSurf/client/HackerSurf.css",
-		"/Users/scott/Code/Meteors/simple-todos/simple-todos.sublime-project",
-		"/Users/scott/Code/Meteors/HackerSurf/public/HackerSurf.html",
-		"/Users/scott/Code/Meteors/HackerSurf/public/HackerSurf.css",
-		"/Users/scott/Code/Meteors/HackerSurf/public/HackerSurf.js",
-		"/Users/scott/Code/Meteors/HackerSurf/HackerSurf.sublime-project",
-		"/Users/scott/Code/Meteors/HackerSurf/private/HackerSurf.sublime-project",
+		"/Users/scott/Code/Meteors/HackerSurf/HackerSurf.html",
+		"/Users/scott/Code/Meteors/HackerSurf/HackerSurf.css",
+		"/Users/scott/Code/Meteors/HackerSurf/HackerSurf.js",
 		"/Users/scott/Code/Meteors/simple-todos/simple-todos.css",
 		"/Users/scott/Code/Meteors/simple-todos/simple-todos.js",
 		"/Users/scott/Code/Meteors/simple-todos/simple-todos.html",
@@ -120,23 +110,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/HackerSurf.html",
+					"file": "/Users/scott/Downloads/pure-layout-side-menu/index.html",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 435,
+						"buffer_size": 4018,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								154,
-								154
+								2023,
+								2023
 							]
 						],
 						"settings":
@@ -144,64 +135,10 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 464.0,
 						"zoom_level": 1.0
 					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/HackerSurf.js",
-					"settings":
-					{
-						"buffer_size": 282,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								221,
-								221
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "lib/scrape.js",
-					"settings":
-					{
-						"buffer_size": 1316,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1107,
-								1107
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 205.0,
-						"zoom_level": 1.0
-					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -242,6 +179,7 @@
 	{
 		"height": 0.0
 	},
+	"project": "HackerSurf.sublime-project",
 	"replace":
 	{
 		"height": 0.0
@@ -253,16 +191,8 @@
 		"selected_items":
 		[
 			[
-				"hacker",
-				"client/HackerSurf.js"
-			],
-			[
-				"hack",
-				"public/HackerSurf.html"
-			],
-			[
 				"",
-				"HackerSurf.sublime-project"
+				"HackerSurf.css"
 			],
 			[
 				"sime",
@@ -283,10 +213,25 @@
 		],
 		"width": 0.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
 	"side_bar_width": 150.0,
-	"status_bar_visible": true
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }

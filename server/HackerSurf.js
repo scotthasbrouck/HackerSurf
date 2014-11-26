@@ -38,7 +38,8 @@ function saveJobs(jobsite, jobs) {
 				sitename: jobsite.sitename,
 				updatedAt: new Date(),
 				icon: jobsite.icon,
-				jobs: jobs
+				jobs: jobs,
+				jobscount: jobs.length
 			}
 		});
 	} else {
@@ -48,7 +49,8 @@ function saveJobs(jobsite, jobs) {
 			sitename: jobsite.sitename,
 			createdAt: new Date(),
 			icon: jobsite.icon,
-			jobs: jobs
+			jobs: jobs,
+			jobscount: jobs.length
 		});
 	}
 }

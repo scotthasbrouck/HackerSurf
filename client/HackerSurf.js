@@ -1,3 +1,4 @@
+//db call to get jobs and jobsites
 var filteredJobSites = function(setSession, returnCount, returnSiteCount, setAllChecked) {
 	var jobsites = Scrapes.find({}, { url: 1, sitename: 1, _id: 0, sort: {sitename: 1} }).fetch();
 	var jobscount = 0;
@@ -17,6 +18,7 @@ var filteredJobSites = function(setSession, returnCount, returnSiteCount, setAll
 	return (returnCount) ? jobscount : (returnSiteCount) ? checkedJobSites : jobsites;
 };
 
+//helpers
 Template.body.helpers({
 	jobs: filteredJobSites,
 	allSitesSession: function() {
@@ -29,15 +31,11 @@ Template.body.helpers({
 		return filteredJobSites(false, false, true);
 	},
 	jobsites: function() {
-		var jobsites = Scrapes.find({}, { url: 1, sitename: 1, _id: 0, sort: {sitename: 1} }).fetch();
-		jobsites.forEach(function(jobsite) {
-			jobsite.checked = ((Session.get("activeSites." + jobsite.url) === undefined) ? true : Session.get("activeSites." + jobsite.url));
-			Session.set("activeSites." + jobsite.url, jobsite.checked);
-		});
-		return jobsites;
+		return filteredJobSites(true);
 	}
 });
 
+//events
 Template.body.events({
 	"change .all-sites-check input": function (event) {
     	Session.set("allSites", event.target.checked);

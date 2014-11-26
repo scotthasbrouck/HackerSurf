@@ -1,13 +1,19 @@
+// Scott Hasbrouck (C) 2014
+// CC0 license: http://creativecommons.org/publicdomain/zero/1.0/
+// http://scotthasbrouck.com
+
 cheerio = Meteor.npmRequire('cheerio');
 interval = 300000; // 5 mins
 
- function startScrape() {
+//call this to start the scraping
+function startScrape() {
 	for (var i = 0; i < Meteor.scrapes.length; i++) {
 		var jobsite = Object.create(Meteor.scrapes[i]);
 		scrapeMethod(jobsite);
 	}
 };
 
+//scrape the job sites
 function scrapeMethod(jobsite) {
 	result = Meteor.http.get(jobsite.url, {timeout:30000});
 	$ = cheerio.load(result.content);
@@ -27,9 +33,10 @@ function scrapeMethod(jobsite) {
 	saveJobs(jobsite, jobs);
 }
 
+//insert and update jobs
 function saveJobs(jobsite, jobs) {
 	if(Scrapes.find({ url:jobsite.url }).count()) {
-		console.log('update ' + jobsite.url);
+		//console.log('update ' + jobsite.url);
 		Scrapes.update({
 			url:jobsite.url 
 		}, {
@@ -43,7 +50,7 @@ function saveJobs(jobsite, jobs) {
 			}
 		});
 	} else {
-		console.log('insert ' + jobsite.url);
+		//console.log('insert ' + jobsite.url);
 		Scrapes.insert({
 			url: jobsite.url,
 			sitename: jobsite.sitename,
@@ -55,7 +62,8 @@ function saveJobs(jobsite, jobs) {
 	}
 }
 
+//startup meteor
 Meteor.startup(function () {
 	startScrape(); //call once to initiate
-  	Meteor.setInterval(startScrape, interval); //then every internal
+  	Meteor.setInterval(startScrape, interval); //then every interval
  });

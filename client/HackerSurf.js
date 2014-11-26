@@ -1,3 +1,7 @@
+// Scott Hasbrouck (C) 2014
+// CC0 license: http://creativecommons.org/publicdomain/zero/1.0/
+// http://scotthasbrouck.com
+
 //db call to get jobs and jobsites
 var filteredJobSites = function(setSession, returnCount, returnSiteCount, setAllChecked) {
 	var jobsites = Scrapes.find({}, { url: 1, sitename: 1, _id: 0, sort: {sitename: 1} }).fetch();

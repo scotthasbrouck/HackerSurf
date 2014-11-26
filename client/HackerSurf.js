@@ -1,25 +1,32 @@
+var filteredJobSites = function(setSession, returnCount, returnSiteCount, setAllChecked) {
+	var jobsites = Scrapes.find({}, { url: 1, sitename: 1, _id: 0, sort: {sitename: 1} }).fetch();
+	var jobscount = 0;
+	var checkedJobSites = 0;
+	jobsites.forEach(function(jobsite) {
+		jobsite.checked = ((setAllChecked) ? true : ((Session.get("activeSites." + jobsite.url) === undefined) ? true : Session.get("activeSites." + jobsite.url)));
+		if(setSession) {
+			Session.set("activeSites." + jobsite.url, jobsite.checked);
+		}
+		if (jobsite.checked) {
+			checkedJobSites++;
+			if (returnCount) {
+				jobscount += jobsite.jobscount;
+			}
+		}
+	});
+	return (returnCount) ? jobscount : (returnSiteCount) ? checkedJobSites : jobsites;
+};
+
 Template.body.helpers({
-	jobs: function() {
-		var jobs = Scrapes.find({}, {sort: {sitename: 1}}).fetch();
-		jobs.forEach(function(jobs) {
-			jobs.checked = ((Session.get("activeSites." + jobs.url) === undefined) ? true : Session.get("activeSites." + jobs.url));
-			console.log(jobs.checked);
-		});
-		return jobs;
-	},
+	jobs: filteredJobSites,
 	allSitesSession: function() {
 		return ((Session.get("allSites") === undefined) ? true : Session.get("allSites"));
 	},
 	jobscount: function() {
-		var jobsites = Scrapes.find({}, { jobscount:1, _id: 0 }).fetch();
-		var jobscount = 0;
-		jobsites.forEach(function(jobsite) {
-			jobscount += jobsite.jobscount;
-		});
-		return jobscount;
+		return filteredJobSites(false, true);
 	},
 	jobsitescount: function() {
-		return Scrapes.find({}, { url: 1, sitename: 1, _id: 0 }).fetch().length;
+		return filteredJobSites(false, false, true);
 	},
 	jobsites: function() {
 		var jobsites = Scrapes.find({}, { url: 1, sitename: 1, _id: 0, sort: {sitename: 1} }).fetch();
@@ -35,10 +42,7 @@ Template.body.events({
 	"change .all-sites-check input": function (event) {
     	Session.set("allSites", event.target.checked);
     	if (event.target.checked) {
-    		var jobsites = Scrapes.find({}, { url: 1, sitename: 1, _id: 0 }).fetch();
-    		jobsites.forEach(function(jobsite) {
-    			Session.set("activeSites." + jobsite.url, true);
-    		});
+    		filteredJobSites(true, false, false, true);
     	}
     }
 });

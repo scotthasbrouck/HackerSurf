@@ -3,7 +3,7 @@
 // http://scotthasbrouck.com
 
 cheerio = Meteor.npmRequire('cheerio');
-interval = 300000; // 5 mins
+interval = 600000; // 5 mins
 
 //call this to start the scraping
 function startScrape() {

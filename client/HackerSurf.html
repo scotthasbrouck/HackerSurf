@@ -16,6 +16,7 @@
 
 		_gs('GSN-456229-R');
 	</script>
+
 </head>
 
 <body>
@@ -57,10 +58,25 @@
 				<a href="https://twitter.com/intent/tweet?screen_name=scotthasbrouck&text=%23HackerSurf%20scrape%20request%3A%20" class="twitter-mention-button" data-related="scotthasbrouck">Recommend a new site to @scotthasbrouck</a>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 				</p>
+				<!-- Begin MailChimp Signup Form -->
+				<hr>
+				<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+				<div id="mc_embed_signup">
+				<form action="//surf.us9.list-manage.com/subscribe/post?u=cf7dcd416ab613c30730ebaa6&amp;id=a67daeed7b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			    <div id="mc_embed_signup_scroll">
+					<label for="mce-EMAIL">Get HackerSurf Job Updates</label>
+					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+				    <div style="position: absolute; left: -5000px;"><input type="text" name="b_cf7dcd416ab613c30730ebaa6_a67daeed7b" tabindex="-1" value=""></div>
+				    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+				    </div>
+				</form>
+				</div>
+				<!--End mc_embed_signup-->
 			</div>
 			<div class="alert alert-danger" id="get-book-alert" role="alert">
 				<strong>Not a hacker yourself, but need to hire one?</strong><br />Manage remote hackers efficiently and avoid the most common mistakes with my book:<br /><a href="http://scotthasbrouck.com/books/" target="_blank">The Non-Developers' Guide to App Outsourcing</a>
 			</div>
+
 			{{#each jobs}}
   				{{> job}}
 			{{/each}}

@@ -35,6 +35,22 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
+#mc_embed_signup {
+    background-color: #1c1e22 !important;
+}
+
+#mc-embedded-subscribe {
+    display: inline-block !important;
+}
+
+#mce-EMAIL {
+    display: inline-block !important;
+}
+
+hr {
+    border-top: 1px solid #454545 !important;
+}
+
 .pure-button {
 	background-image: -webkit-linear-gradient(#8a9196, #7a8288 60%, #70787d);
 	background-image: -o-linear-gradient(#8a9196, #7a8288 60%, #70787d);

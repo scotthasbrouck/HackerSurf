@@ -1,0 +1,16 @@
+.meteor/local
+.meteor/meteorite
+# Logs
+logs
+*.log
+
+#Sublime
+#.sublime-*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Build
+*.tar.gz

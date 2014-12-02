@@ -1,6 +1,7 @@
 // Scott Hasbrouck (C) 2014
 // CC0 license: http://creativecommons.org/publicdomain/zero/1.0/
 // http://scotthasbrouck.com
+// Server Code
 
 cheerio = Meteor.npmRequire('cheerio');
 interval = 600000; // 5 mins
@@ -67,3 +68,10 @@ Meteor.startup(function () {
 	startScrape(); //call once to initiate
   	Meteor.setInterval(startScrape, interval); //then every interval
  });
+
+//Publish
+Meteor.publish("scrapes", function () {
+	return Scrapes.find();
+});
+
+//Google Analytics

@@ -4,8 +4,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
 meteorhacks:npm
 
 
@@ -14,3 +12,4 @@ http
 ficshelf:media-query
 mizzao:bootstrap-3
 gwendall:session-json
+datariot:ganalytics

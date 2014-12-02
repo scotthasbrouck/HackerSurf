@@ -1,6 +1,7 @@
 // Scott Hasbrouck (C) 2014
 // CC0 license: http://creativecommons.org/publicdomain/zero/1.0/
 // http://scotthasbrouck.com
+// Client Code
 
 //db call to get jobs and jobsites
 var filteredJobSites = function(setSession, returnCount, returnSiteCount, setAllChecked) {
@@ -57,3 +58,6 @@ Template.jobsite.events({
 		}
     }
 });
+
+//Subscribe
+Meteor.subscribe("scrapes");

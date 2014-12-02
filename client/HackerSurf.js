@@ -4,12 +4,12 @@
 // Client Code
 
 //db call to get jobs and jobsites
-var filteredJobSites = function(setSession, returnCount, returnSiteCount, setAllChecked) {
+var filteredJobSites = function(setSession, returnCount, returnSiteCount, setAllChecked, setAllUnchecked) {
 	var jobsites = Scrapes.find({}, { url: 1, sitename: 1, _id: 0, sort: {sitename: 1} }).fetch();
 	var jobscount = 0;
 	var checkedJobSites = 0;
 	jobsites.forEach(function(jobsite) {
-		jobsite.checked = ((setAllChecked) ? true : ((Session.get("activeSites." + jobsite.url) === undefined) ? true : Session.get("activeSites." + jobsite.url)));
+		jobsite.checked = ((setAllChecked) ? true : ((setAllUnchecked) ? false : ((Session.get("activeSites." + jobsite.url) === undefined) ? true : Session.get("activeSites." + jobsite.url))));
 		if(setSession) {
 			Session.set("activeSites." + jobsite.url, jobsite.checked);
 		}
@@ -46,6 +46,8 @@ Template.body.events({
     	Session.set("allSites", event.target.checked);
     	if (event.target.checked) {
     		filteredJobSites(true, false, false, true);
+    	} else {
+			filteredJobSites(true, false, false, false, true);
     	}
     }
 });

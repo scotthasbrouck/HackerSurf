@@ -19,6 +19,7 @@
 </head>
 
 <body>
+	<style>#forkongithub a{background:#f89406;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#F0D30A;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:fixed;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:30px;right:-50px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:2px 2px 10px rgba(0,0,0,0.8);}}</style><span id="forkongithub"><a href="https://github.com/scotthasbrouck/HackerSurf" target="_blank">Fork me on GitHub</a></span>
 	<div id="layout">
  		
 		<div id="menu">
@@ -42,14 +43,20 @@
 				One day I thought I'd try to find a freelance gig or two.<br /> That turned into 8 hours and about 23 browser tabs.<br />So I said <a href="https://www.youtube.com/watch?v=XxWmM1v6Bvw" target="_blank">fuck</a> that <a href="https://www.youtube.com/watch?v=G4YztQ5h-Mg" target="_blank">shit</a>, and made hacker.surf, to put all the hacker jobs in one place.<br /><i>Source code is <a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 Public Domain license</a>, and on <a href="https://github.com/scotthasbrouck/HackerSurf" target="_blank"><i class="fa fa-github"></i> Github</a>. Enjoy.</i>
 				 - <a href="http://scotthasbrouck.com" target="_blank">Scott Hasbrouck</a>
 				</p>
-				<p><a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out HackerSurf - #developer #jobs all in one place" data-via="scotthasbrouck">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+				<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://hacker.surf" data-text="Check out HackerSurf - #developer #jobs all in one place" data-via="scotthasbrouck">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</p>
         	</div>
 		</div>
 
 		<div class="content">
 			<div class="well well-sm">
-  				{{jobscount}} jobs from {{jobsitescount}} sites
+  				<h3>{{jobscount}} jobs from {{jobsitescount}} sites</h3>
+  				<p>
+				<h6>Recommend a new site</h6>
+				<a href="https://twitter.com/intent/tweet?screen_name=scotthasbrouck&text=%23HackerSurf%20scrape%20request%3A%20" class="twitter-mention-button" data-related="scotthasbrouck">Recommend a new site to @scotthasbrouck</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</p>
 			</div>
 			{{#each jobs}}
   				{{> job}}

@@ -73,5 +73,3 @@ Meteor.startup(function () {
 Meteor.publish("scrapes", function () {
 	return Scrapes.find();
 });
-
-//Google Analytics

@@ -18,7 +18,7 @@ function startScrape() {
 function scrapeMethod(jobsite) {
 	result = Meteor.http.get(jobsite.url, {timeout:60000});
 	$ = cheerio.load(result.content);
-
+	
 	var jobs = [];
 
 	$(jobsite['container']).each(function() {

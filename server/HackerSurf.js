@@ -17,20 +17,33 @@ function startScrape() {
 //scrape the job sites
 function scrapeMethod(jobsite) {
 	result = Meteor.http.get(jobsite.url, {timeout:60000});
-	$ = cheerio.load(result.content);
-	
+
 	var jobs = [];
 
-	$(jobsite['container']).each(function() {
-		var href = $(this).find(jobsite['links']).eq(0).attr('href');
-		jobs.push({
-			title: $(this).find(jobsite['titles']).eq(0).text() || '',
-			engagement: $(this).find(jobsite['engagements']).eq(0).text() || '',
-			location: $(this).find(jobsite['locations']).eq(0).text() || '',
-			company: $(this).find(jobsite['companies']).eq(0).text() || '',
-			link: ((href.substring(0,4) === 'http') ? href : jobsite['linkprefix'] + href) || ''
+	if(jobsite['json']) {  // response is in JSON
+		var returnedJobs = JSON.parse(result.content).body[jobsite['container']];
+		for(i in returnedJobs) {
+			jobs.push({
+				title: returnedJobs[i][jobsite['titles']] || '',
+				engagement: returnedJobs[i][jobsite['engagements']] || '',
+				location: returnedJobs[i][jobsite['locations']] || '',
+				company: returnedJobs[i][jobsite['companies']] || '',
+				link: returnedJobs[i][jobsite['links']] || '',
+			});
+		}
+	} else { // repsonse is in HTML
+		$ = cheerio.load(result.content);
+		$(jobsite['container']).each(function() {
+			var href = $(this).find(jobsite['links']).eq(0).attr('href');
+			jobs.push({
+				title: $(this).find(jobsite['titles']).eq(0).text() || '',
+				engagement: $(this).find(jobsite['engagements']).eq(0).text() || '',
+				location: $(this).find(jobsite['locations']).eq(0).text() || '',
+				company: $(this).find(jobsite['companies']).eq(0).text() || '',
+				link: ((href.substring(0,4) === 'http') ? href : jobsite['linkprefix'] + href) || ''
+			});
 		});
-	});
+	}
 	saveJobs(jobsite, jobs);
 }
 

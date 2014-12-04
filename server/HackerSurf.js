@@ -20,8 +20,8 @@ function scrapeMethod(jobsite) {
 
 	var maxpage = parseInt(jobsite.maxpage) || 1;
 
-	for (page = 1;  maxpage >= page; page++) {
-		var linpostfix = (page > 1) ? jobsite['pageindex'] + page : '';
+	for (page = (jobsite.startpage || 1);  maxpage >= page; page++) {
+		var linpostfix = (page > jobsite.startpage) ? jobsite['pageindex'] + page : '';
 		var jobsiteUrl = jobsite.url + linpostfix;
 
 		result = Meteor.http.get(jobsiteUrl, {timeout:60000});

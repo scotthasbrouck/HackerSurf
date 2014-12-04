@@ -41,8 +41,10 @@ function scrapeMethod(jobsite) {
 			$ = cheerio.load(result.content);
 			$(jobsite['container']).each(function() {
 				var href = $(this).find(jobsite['links']).eq(0).attr('href');
+				var title = $(this).find(jobsite['titles']).eq(0).text() || '';
+				title = (jobsite['removestring']) ? title.replace(jobsite['removestring'], "") : title;
 				jobs.push({
-					title: $(this).find(jobsite['titles']).eq(0).text() || '',
+					title: title,
 					engagement: $(this).find(jobsite['engagements']).eq(0).text() || '',
 					location: $(this).find(jobsite['locations']).eq(0).text() || '',
 					company: $(this).find(jobsite['companies']).eq(0).text() || '',

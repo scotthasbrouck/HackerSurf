@@ -70,6 +70,9 @@ hr {
 	text-decoration: none;
 }
 
+a.btn {
+    text-decoration: none !important;
+}
 
 .retina-icon {
 	width: 48px;
@@ -83,6 +86,8 @@ hr {
 
 #get-book-alert {
     text-align: center;
+    background-color: #1084A6;
+    border-color: #1C9BC0;
 }
 
 /* checkboxes */

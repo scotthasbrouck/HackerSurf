@@ -15,3 +15,5 @@ pids
 
 # Build
 *.tar.gz
+
+.demeteorized

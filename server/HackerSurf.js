@@ -5,6 +5,7 @@
 
 cheerio = Meteor.npmRequire('cheerio');
 interval = 600000; // 5 mins
+timeout = 60000; //1 minute
 
 //call this to start the scraping
 function startScrape() {
@@ -24,7 +25,7 @@ function scrapeMethod(jobsite) {
 		var linpostfix = (page > jobsite.startpage) ? jobsite['pageindex'] + page : '';
 		var jobsiteUrl = jobsite.url + linpostfix;
 
-		result = Meteor.http.get(jobsiteUrl, {timeout:60000});
+		result = Meteor.http.get(jobsiteUrl, {timeout:timeout});
 
 		if(jobsite['json']) {  // response is in JSON
 			var returnedJobs = JSON.parse(result.content).body[jobsite['container']];
